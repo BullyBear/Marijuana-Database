@@ -1,0 +1,602 @@
+
+html, body {
+/*    background: url('https://uchealth-wp-uploads.s3.amazonaws.com/wp-content/uploads/sites/6/2018/09/19033848/Marijuana-plant-Getty-photo-sized-1024x684.jpg') no-repeat;
+    background-size: cover;*/
+    background-color: lightgreen;
+}
+
+img {
+    height: 50px;
+    position: absolute;
+    top: 75px;
+    left: 250px;
+/*    left: 550px;*/
+}
+
+#title {
+    position: absolute;
+/*    left: 375px;*/
+    top: 10px;
+    padding-bottom: 10px;
+    color: black;
+    left: 50px;
+}
+
+#titleTwo {
+    position: absolute;
+    top: 75px;
+    left: 50px;
+/*    left: 375px;*/
+}
+
+#api {
+    position: absolute;
+/*    left: 375px;*/
+    top: 100px;
+    color: blue;
+    text-decoration: underline;
+    left: 75px;
+}
+
+
+
+
+/*TABLE*/
+
+#tableWrapper {
+  position: absolute;
+  top: 200px;
+}
+
+#tableHead {
+  color: purple;
+}
+
+
+#state_selection {
+  position: absolute;
+  top: 0px;
+/*  left: 100px;*/
+}
+
+.control {
+  float: left;
+  padding-left: 20px;
+}
+
+.control a {
+  color: black;
+  font-size: 12px;
+  padding: 5px;
+  background: #E2E2E2;
+  cursor: pointer;
+  margin-right: 3px;
+  text-decoration: none;
+}
+
+.control a:hover {
+  text-decoration: underline;
+}
+
+.control a.active {
+  color: white;
+  background: #555;
+}
+
+#controls {
+  width: 100%;
+  float: left;
+  margin-bottom: 10px;
+}
+
+
+/* Dropdown*/
+.col-md-4 {
+  text-align: center;
+  position: absolute;
+  top: 100px;
+}
+
+#country {
+  position: absolute;
+  font-size: 15px;
+  top: -60px;
+  left: 50px;
+/*  opacity: 0;*/
+}
+
+#state {
+  position: absolute;
+  font-size: 15px;
+  top: -60px;
+  left: 400px;
+/*  opacity: 0;*/
+}
+
+#city {
+  position: absolute;
+  font-size: 15px;
+  top: -60px;
+  left: 750px;
+/*  opacity: 0;*/
+}
+
+#country-dropdown {
+  position: absolute;
+  top: 0px;
+  left: 50px;
+}
+
+
+#state-dropdown {
+  position: absolute;
+  top: 0px;
+  left: 400px;
+}
+
+#city-dropdown {
+  position: absolute;
+  top: 0px;
+  left: 750px;
+}
+
+
+/*Buttons*/
+
+#hybridButton {
+  position: absolute;
+  top: 200px;
+  left: 75px;
+/*  opacity: 0;*/
+}
+
+#sativaButton {
+  position: absolute;
+  top: 200px;
+  left: 190px;
+/*  opacity: 0;*/
+}
+
+#indicaButton {
+  position: absolute;
+  top: 200px;
+  left: 310px;
+/*  opacity: 0;*/
+}
+
+
+
+/*Slider*/
+
+#sliderLabel {
+  position: absolute;
+  top: 160px;
+  left: 425px;
+/*  opacity: 0;*/
+}
+
+#sliderAmount {
+  position: absolute;
+  top: 180px;
+  left: 660px;
+  width: 60px;
+/*  opacity: 0;*/
+}
+
+#slider-range {
+/*  position: absolute;
+  width: 300px;
+  margin-top: 10px;*/
+/*  position: absolute;
+  top: 8150px;
+  left: 600px;*/
+}
+
+
+#slider-range, #slider-range2 {
+  width:300px;
+/*  width:50px;*/
+  margin-top:10px;
+  position: absolute;
+  top: 200px;
+  left: 425px;
+/*  opacity: 0;*/
+
+}
+
+#slider-range2.ui-slider-horizontal {
+    border: 0 none;
+}
+
+#slider-range2.ui-slider-horizontal .ui-slider-range, #slider-range2.ui-slider-horizontal .ui-slider-handle {
+    background: url("http://unbug.ru/examples/jquery/slider/slide.png") repeat scroll 0 0 transparent;
+}
+
+#slider-range2.ui-slider-horizontal .ui-slider-range {
+    background-position: 0 -42px;
+    background-repeat: repeat-x;
+    height: 21px;
+}
+
+#slider-range2.ui-slider-horizontal .ui-slider-handle {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    border: 0 none;
+    height: 21px;
+    top: 0;
+    width: 21px;
+}
+
+#slider-range2.ui-slider-horizontal .ui-slider-handle:focus {
+    outline: 0 none;
+}
+
+#slider-range2.ui-slider-horizontal .ui-slider-handle + .ui-slider-handle {
+    background-position: -21px 0;
+}
+
+
+
+/*Search*/
+
+#myInput {
+/*  background-image: url('/css/search_icon.jpg');*/
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  /*width: 100%;*/
+  width: 200px;
+  height: 10px;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  position: absolute;
+  top: 200px;
+  left: 815px;
+/*  opacity: 0;*/
+}
+
+
+
+/*#phenotypes {
+  position: absolute;
+  top: 150px;
+}
+
+#thc {
+  position: absolute;
+  top: 150px;
+  left: 400px;
+}
+
+
+#search_section {
+  position: absolute;
+  top: 170px;
+  left: 800px;
+}*/
+
+
+
+
+#tableID {
+/*  position: relative;*/
+  width: 100%;
+/*  margin-top: 350px;*/
+  overflow-x: scroll;
+  font-size: 15px;
+/*  top: 12250px;*/
+/*  position: absolute;*/
+/*  opacity: 0;*/
+}
+
+
+#myTable {
+/*  opacity: 0;*/
+position: absolute;
+top: 300px;
+}
+
+
+.divScroll {
+  overflow-y: scroll;
+  width: 10px;
+  height: 500px;
+}
+
+
+th {
+  background-color: white;
+  color: black;
+  height: 10px;
+  vertical-align: bottom;
+  text-align: left;
+  padding: 1px 4px;
+}
+
+
+td {
+  height: 50px;
+  vertical-align: bottom;
+  text-align: left;
+  padding: 1px 4px;
+}
+
+
+tr:hover {background-color: #f5f5f5;}
+
+tr:nth-child(odd) {background-color: #f2f2f2;}
+
+
+/*tbody tr:first-child td,
+text {
+  font-weight: bold;
+}*/
+
+
+.row {
+  margin-top: 50px;
+}
+
+#select3 {
+  position: relative;
+  height: 32px;
+  font-size: 15px;
+  margin-bottom: 30px;
+  max-width: 100%;
+  width: 300px;
+  float: left;
+}
+
+#select4 {
+  position: relative;
+  height: 32px;
+  font-size: 15px;
+  margin-bottom: 30px;
+  max-width: 100%;
+  width: 300px;
+  float: left;
+}
+
+#select5 {
+  position: relative;
+  height: 32px;
+  font-size: 15px;
+  margin-bottom: 30px;
+  max-width: 100%;
+  width: 300px;
+  float: left;
+}
+
+
+#nameTable {
+  color: grey;
+}
+
+#ratingTable {
+  color: grey;
+}
+
+#reviewTable {
+  color: grey;
+}
+
+#phenotypeTable {
+  color: grey;
+}
+
+#thcTable {
+  color: grey;
+}
+
+#cbdTable {
+  color: grey;
+}
+
+#cityTable {
+  color: grey;
+}
+
+#stateTable {
+  color: grey;
+}
+
+#countryTable {
+  color: grey;
+}
+
+#adhdTable {
+  color: grey;
+}
+
+#anorexiaTable {
+  color: grey;
+}
+
+#anxietyTable {
+  color: grey;
+}
+
+#anxiousTable {
+  color: grey;
+}
+
+#arousedTable {
+  color: grey;
+}
+
+#arthritisTable {
+  color: grey;
+}
+
+#asthmaTable {
+  color: grey;
+}
+
+#cancerTable {
+  color: grey;
+}
+
+#crampsTable {
+  color: grey;
+}
+
+#creativeTable {
+  color: grey;
+}
+
+#depressionTable {
+  color: grey;
+}
+
+#dizzyTable {
+  color: grey;
+}
+
+#energeticTable {
+  color: grey;
+}
+
+#epilepsyTable {
+  color: grey;
+}
+
+#euphoricTable {
+  color: grey;
+}
+
+#fatigueTable {
+  color: grey;
+}
+
+#fibromyalgiaTable {
+  color: grey;
+}
+
+#focusedTable {
+  color: grey;
+}
+
+#gigglyTable {
+  color: grey;
+}
+
+#happyTable {
+  color: grey;
+}
+
+#headacheTable {
+  color: grey;
+}
+
+#headachesTable {
+  color: grey;
+}
+
+#hungryTable {
+  color: grey;
+}
+
+#hypertensionTable {
+  color: grey;
+}
+
+#inflammationTable {
+  color: grey;
+}
+
+#insomniaTable {
+  color: grey;
+}
+
+#migrainesTable {
+  color: grey;
+}
+
+#nauseaTable {
+  color: grey;
+}
+
+#pmsTable {
+  color: grey;
+}
+
+#ptsdTable {
+  color: grey;
+}
+
+#painTable {
+  color: grey;
+}
+
+#paranoidTable {
+  color: grey;
+}
+
+#relaxedTable {
+  color: grey;
+}
+
+#seizuresTable {
+  color: grey;
+}
+
+#sleepyTable {
+  color: grey;
+}
+
+#spasticityTable {
+  color: grey;
+}
+
+#stressTable {
+  color: grey;
+}
+
+#talkativeTable {
+  color: grey;
+}
+
+#tinglyTable {
+  color: grey;
+}
+
+#upliftedTable {
+  color: grey;
+}
+
+#appetiteTable {
+  color: grey;
+}
+
+#diseaseTable {
+  color: grey;
+}
+
+#disorderTable {
+  color: grey;
+}
+
+#eyesTable {
+  color: grey;
+}
+
+#injuryTable {
+  color: grey;
+}
+
+#mouthTable {
+  color: grey;
+}
+
+#pressureTable {
+  color: grey;
+}
+
+#sclerosisTable {
+  color: grey;
+}
+
+#spasmsTable {
+  color: grey;
+}

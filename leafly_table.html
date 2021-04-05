@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Leafly Database</title>
+
+    <meta charset="utf-8">
+    <meta name="description"
+          content="Leafly Database">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="keywords"
+          content="leafly, database, marijuana, pot, weed, data visualization, dataviz, d3.js, scrape, table">
+    <meta name="news_keywords"
+          content="leafly, database, marijuana, pot, weed, data visualization, dataviz, d3.js, scrape, table">
+
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link href='../static/data/leafly_table/css/leafly_table.css' rel='stylesheet' type='text/css'> 
+
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+
+    <script src="../static/data/leafly_table/js/leafly_table.js"></script>
+
+
+
+</head>
+
+
+<body>
+
+{% block content %}
+
+
+ <a href="https://www.deplorablesnowflake.org/"> 
+  <img src="/static/american.jpg" id="primary-logo">
+ </a>
+
+<h3 id="title">A Marijuana Database</h3>
+<h6 id="titleTwo">Data Scraped From </h6><br><a id="api" href="https://www.leafly.com/">Leafly.com</a>
+
+
+
+<div id="tableWrapper">
+
+
+  <div id="state_selection" class="dropdown control">
+
+        <div class="col-md-4">
+          <h6 id="country">Select <br> Country:</h6>
+          <div id="country-dropdown"></div>
+          <div id="select3"></div>
+        </div>
+        <div class="col-md-4">
+          <h6 id="state">Select State:</h6>
+          <div id="state-dropdown"></div>
+          <div id="select4"></div>
+        </div>
+        <div class="col-md-4">
+          <h6 id="city">Select City:</h6>
+          <div id="city-dropdown"></div>
+          <div id="select5"></div>
+        </div>
+
+  </div>
+
+
+  <div id="controls">
+
+
+  <div id="buttons" onclick="buttonLookup()">
+  <input id="hybridButton" type="button" value="Hybrid" class="active">
+  <input id="sativaButton" type="button" value="Sativa">
+  <input id="indicaButton" type="button" value="Indica">
+  </div>
+
+
+  <label id="sliderLabel" for="amount">Value range:</label>
+  <input type="text" id="sliderAmount" style="border: 0; color: purple; font-weight: bold;" />
+  <div id="slider-range"></div>
+
+
+   </div> 
+
+
+
+<input type="text" id="myInput" onkeyup="mySearch()" placeholder="Search for names.." title="Type in a name">
+
+
+
+<div id="tableID" class="divScroll">
+    <table id="myTable" class="table table-hover">
+      <thead id="tableHead" style="color:purple">
+        <tr>
+          <th id="nameTable">Title</th>
+          <th id="reviewTable">Reviews</th>
+          <th id="ratingTable">Rating</th>
+          <th id="phenotypeTable">Phenotype</th>
+          <th id="thcTable">THC</th>
+          <th id="cbdTable">CBD</th>
+          <th id="adhdTable">ADHD</th>
+          <th id="anorexiaTable">Anorexia</th>
+          <th id="anxietyTable">Anxiety</th>
+          <th id="anxiousTable">Anxious</th>
+          <th id="arousedTable">Aroused</th>
+          <th id="arthritisTable">Arthritis</th>
+          <th id="asthmaTable">Asthma</th>
+          <th id="cancerTable">Cancer</th>
+          <th id="crampsTable">Cramps</th>
+          <th id="creativeTable">Creative</th>
+          <th id="depressionTable">Depression</th>
+          <th id="dizzyTable">Dizzy</th>
+          <th id="energeticTable">Energetic</th>
+          <th id="epilepsyTable">Epilepsy</th>
+          <th id="euphoricTable">Euphoric</th>
+          <th id="fatigueTable">Fatigue</th>
+          <th id="fibromyalgiaTable">Fibromyalgia</th>
+          <th id="focusedTable">Focused</th>
+          <th id="gigglyTable">Giggly</th>
+          <th id="happyTable">Happy</th>
+          <th id="headacheTable">Headache</th>
+          <th id="headachesTable">Headaches</th>
+          <th id="hungryTable">Hungry</th>
+          <th id="hypertensionTable">Hypertension</th>
+          <th id="inflammationTable">Inflammation</th>
+          <th id="insomniaTable">Insomnia</th>
+          <th id="migrainesTable">Migraines</th>
+          <th id="nauseaTable">Nausea</th>
+          <th id="pmsTable">PMS</th>
+          <th id="ptsdTable">PTSD</th>
+          <th id="painTable">Pain</th>
+          <th id="paranoidTable">Paranoid</th>
+          <th id="relaxedTable">Relaxed</th>
+          <th id="seizuresTable">Seizures</th>
+          <th id="sleepyTable">Sleepy</th>
+          <th id="spasticityTable">Spasticity</th>
+          <th id="stressTable">Stress</th>
+          <th id="talkativeTable">Talkative</th>
+          <th id="tinglyTable">Tingly</th>
+          <th id="upliftedTable">Uplifted</th>
+          <th id="appetiteTable">Appetite</th>
+          <th id="diseaseTable">Disease</th>
+          <th id="disorderTable">Disorder</th>
+          <th id="eyesTable">Eyes</th>
+          <th id="injuryTable">Injury</th>
+          <th id="mouthTable">Mouth</th>
+          <th id="pressureTable">Pressure</th>
+          <th id="sclerosisTable">Sclerosis</th>
+          <th id="spasmsTable">Spasms</th>
+        </tr>
+      </thead>
+      <tbody class="csv-data-body">
+      </tbody>
+    </table>
+</div>
+
+
+</div> <!-- TableWrapper-->
+
+
+
+
+
+<script type="text/javascript">
+
+</script>
+
+
+
+</body>
+</html>
+
+{% endblock %}
